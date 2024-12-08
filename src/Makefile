@@ -33,10 +33,6 @@ test_moesi: smp_cache
 	@echo "Running test with MOESI protocol, cache size = infinite, associativity = 8, block size = 64, processors = 4, trace = canneal.04t.longTrace"
 	./smp_cache --cache-size -1 --assoc 8 --block-size 64 --num-proc 4 --protocol 1 --trace ../trace/canneal.04t.longTrace
 
-mytest: smp_cache
-	@echo "Running mytest with MESI protocol, cache size = infinite, associativity = infinite, block size = 64, processors = 4, trace = canneal.04t.longTrace"
-	./smp_cache --cache-size -1 --assoc 8 --block-size 64 --num-proc 4 --protocol 0 --trace ../trace/mytest.debug
-
 debug_mesi: smp_cache
 	@echo "Running test with MESI protocol, cache size = infinite, associativity = infinite, block size = 64, processors = 4, trace = canneal.04t.longTrace"
 	./smp_cache --cache-size -1 --assoc 8 --block-size 64 --num-proc 4 --protocol 0 --trace ../trace/canneal.04t.debug
